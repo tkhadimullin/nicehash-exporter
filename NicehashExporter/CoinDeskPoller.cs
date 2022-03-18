@@ -19,7 +19,7 @@ namespace NicehashExporter
         {
             _configuration = configuration;
             _metrics = metrics;            
-            _prefix = configuration.GetValue("prefix", "coindesk");
+            _prefix = configuration.GetValue("coindeskPrefix", "coindesk");
             _mainCurrency = "NZD"; // TODO: configuration.GetValue("mainCurrency", "NZD").ToUpperInvariant();
 
             _rates = new Dictionary<string, double>() { { _mainCurrency, -1 }, { "USD", -1 } };
